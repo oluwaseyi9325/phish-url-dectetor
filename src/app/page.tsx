@@ -47,25 +47,36 @@ export default function Home() {
 
     return (
         <div className="min-h-screen bg-gray-100 flex items-center justify-center">
-            <div className="bg-white shadow-lg rounded-lg p-6 w-full max-w-md">
-                <h1 className="text-2xl font-bold mb-4 text-center">Bammy Project</h1>
-                <h2 className="text-lg font-bold mb-4 text-center">Phishing Link Checker</h2>
+            <div className="bg-white shadow-lg rounded-lg p-4 sm:p-6 w-full max-w-xs sm:max-w-md">
+                {/* Responsive Title */}
+                <h2 className="text-xl sm:text-2xl font-bold mb-4 text-center">Phishing Website Detection</h2>
+
+                {/* Input Field */}
                 <input
                     type="text"
                     placeholder="Enter URL"
-                    className="w-full p-3 border rounded-md mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full p-2 sm:p-3 border rounded-md mb-4 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-blue-500"
                     value={url}
                     onChange={(e) => setUrl(e.target.value)}
                 />
 
+                {/* Button with Loader Icon when checking */}
                 <button
-                    className={`w-full py-3 bg-blue-500 text-white rounded-md font-semibold transition ${loading ? "opacity-50 cursor-not-allowed" : ""}`}
+                    className={`w-full py-2 sm:py-3 bg-blue-500 text-white rounded-md font-semibold transition ${loading ? "opacity-50 cursor-not-allowed" : ""}`}
                     onClick={checkUrl}
                     disabled={loading}
                 >
-                    {loading ? "Checking..." : "Check URL"}
+                    {loading ? (
+                        <div className="flex justify-center items-center">
+
+                            Checking...
+                        </div>
+                    ) : (
+                        "Check URL"
+                    )}
                 </button>
 
+                {/* Status Display */}
                 {status && (
                     <div
                         className={`mt-4 text-center p-3 rounded-md ${status.includes("Threat") ? "bg-red-100 text-red-600" : "bg-green-100 text-green-600"}`}
@@ -73,7 +84,13 @@ export default function Home() {
                         {status}
                     </div>
                 )}
+
+                {/* Footer */}
+                <div className="mt-6 text-center text-gray-500 text-sm">
+                    Powered by <span className="font-semibold">Bammy & Tetro</span>
+                </div>
             </div>
         </div>
+
     );
 }
