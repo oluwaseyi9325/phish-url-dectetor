@@ -9,8 +9,8 @@ export default function Home() {
     const [loading, setLoading] = useState<boolean>(false);
 
     // Array of known phishing URLs
-    
-    
+
+
 
     const checkUrl = () => {
         setLoading(true);
@@ -48,14 +48,16 @@ export default function Home() {
     return (
         <div className="min-h-screen bg-gray-100 flex items-center justify-center">
             <div className="bg-white shadow-lg rounded-lg p-6 w-full max-w-md">
-                <h1 className="text-2xl font-bold mb-4 text-center">Phishing Link Checker</h1>
+                <h1 className="text-2xl font-bold mb-4 text-center">Bammy Project</h1>
+                <h2 className="text-lg font-bold mb-4 text-center">Phishing Link Checker</h2>
                 <input
                     type="text"
                     placeholder="Enter URL"
-                    className="w-full p-3 border rounded-md mb-4"
+                    className="w-full p-3 border rounded-md mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
                     value={url}
                     onChange={(e) => setUrl(e.target.value)}
                 />
+
                 <button
                     className={`w-full py-3 bg-blue-500 text-white rounded-md font-semibold transition ${loading ? "opacity-50 cursor-not-allowed" : ""}`}
                     onClick={checkUrl}

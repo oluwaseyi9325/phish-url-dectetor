@@ -15,5 +15,3 @@ function NotFound() {
 }
 
 export default NotFound;
-
-// AIzaSyDRBDka441IpzS2E1v3d6LGsW0_mudif7Q
