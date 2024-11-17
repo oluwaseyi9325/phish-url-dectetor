@@ -34,15 +34,18 @@ function PortfolioPage() {
                 <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-gray-800">
                     Welcome to My Portfolio
                 </h1>
-                <div className="flex justify-center items-center lg:hidden ">
-                    <div className="rounded-full overflow-hidden shadow-xl border-4 border-blue-500">
+
+
+                <div className="flex justify-center items-center h-full w-full lg:hidden">
+                    <div className="rounded-full flex justify-center items-center overflow-hidden shadow-xl border-4 border-blue-500">
                         <Image
                             src={require("../asset/seyi.jpg")} // Replace with your picture
                             alt="Tobi Omoniyi"
-                            className="w-full h-full object-cover"
+                            className="w-[200px] h-[200px] object-cover"
                         />
                     </div>
                 </div>
+
                 <h2 className="text-xl sm:text-2xl lg:text-3xl text-blue-800 font-semibold">
                     I am Tobi Omoniyi, a Forex Trader
                 </h2>
