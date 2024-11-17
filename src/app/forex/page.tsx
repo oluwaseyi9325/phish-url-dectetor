@@ -28,18 +28,20 @@ function PortfolioPage() {
     };
 
     return (
-        <div className="min-h-screen flex flex-col lg:flex-row items-center justify-between bg-gradient-to-br from-blue-50 to-blue-200 py-6 px-6 sm:px-10 lg:px-20">
+        <div className="min-h-screen flex flex-col lg:flex-row items-center justify-between bg-gradient-to-br from-blue-50 to-blue-200 py-6 px-3 sm:px-10 lg:px-20">
             {/* Left Section */}
             <div className="flex-1 flex flex-col justify-center items-start space-y-6">
                 <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-gray-800">
                     Welcome to My Portfolio
                 </h1>
-                <div className="rounded-full block lg:hidden overflow-hidden w-48 h-48 sm:w-60 sm:h-60 lg:w-72 lg:h-72 shadow-xl border-4 border-blue-500">
-                    <Image
-                        src={require("../asset/seyi.jpg")} // Replace with your picture
-                        alt="Tobi Omoniyi"
-                        className="w-full h-full object-cover"
-                    />
+                <div className="flex justify-center items-center lg:hidden ">
+                    <div className="rounded-full overflow-hidden shadow-xl border-4 border-blue-500">
+                        <Image
+                            src={require("../asset/seyi.jpg")} // Replace with your picture
+                            alt="Tobi Omoniyi"
+                            className="w-full h-full object-cover"
+                        />
+                    </div>
                 </div>
                 <h2 className="text-xl sm:text-2xl lg:text-3xl text-blue-800 font-semibold">
                     I am Tobi Omoniyi, a Forex Trader
@@ -53,9 +55,9 @@ function PortfolioPage() {
                 </div>
                 <button
                     onClick={copyToClipboard}
-                    className="mt-4 px-5 py-3 bg-green-600 text-white text-lg rounded-lg hover:bg-green-700 shadow-lg"
+                    className="mt-4 px-4 py-3 bg-green-600 text-white text-lg rounded-lg hover:bg-green-700 shadow-lg"
                 >
-                    Click Here to Join My Telegram Group
+                    Click to Join My Telegram Group
                 </button>
             </div>
 
