@@ -1,3 +1,6 @@
 {
-  "/page": "app/page.js"
+  "/page": "app/page.js",
+  "/essential/page": "app/essential/page.js",
+  "/forex/page": "app/forex/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js"
 }
